@@ -1,0 +1,58 @@
+******************************CLONAR REPO************************************************************************
+
+EQUIPO@DESKTOP-MHKF88G MINGW64 ~/Documents/LAMDA/DJANGO/UDEMY/h_proyectos
+$ git clone https://github.com/Crhistandro/UsuariosDJ.git
+
+****************************ENTORNO CMD***************************************************************************
+python -m venv NOMBRE_DEL_ENTORNO
+EJM
+C:\Users\EQUIPO\Documents\LAMDA\DJANGO\UDEMY\h_proyectos\entornos>python -m venv usersdj
+
+****************************SIGUIENTES PAQUETE DJANGO ********************************************************************
+(usersdj) C:\Users\EQUIPO\Documents\LAMDA\DJANGO\UDEMY\h_proyectos\UsuariosDJ>
+
+pip install django
+
+****************************CREAR NUESTRO PROYECTO ****************************************************************
+django-admin startproject NOMBRE_PROYECTO
+EJM
+(usersdj) C:\Users\EQUIPO\Documents\LAMDA\DJANGO\UDEMY\h_proyectos\UsuariosDJ>django-admin startproject usuarios
+
+*********************************PAQUETES ADICIONALES *************************************************************************
+
+pip install unipath
+pip install pillow  --->     (MANEJO IAGENES CON DJANGO)
+pip freeze --local --->  listados todos los paquetes  dentro del programa:
+
+pip install -r requirements/local.txt ---> Instala todos los paquetes que estén listados dentro del archivo:
+	asgiref==3.11.0
+	Django==5.2.8
+	pillow==12.0.0
+	sqlparse==0.5.3
+	tzdata==2025.2
+	Unipath==1.1
+
+*****************************CONFIGURAR LOCAL DATA BASE PARA CONECTARNOS A POSGRESS***********************************************************************
+pip install psycopg2-binary
+
+
+
+
+
+********************************EJECUTAR ESTO ANTES DEL RUNSERVER PARA QUE SEPA DONDE SE EJECUTA O ESTA EL  LOCAL **************************************
+
+python manage.py runserver --settings=usuarios.settings.local
+python manage.py runserver --settings=NOMBRE_PROYECTO.settings.local
+
+
+EJM
+(usersdj) C:\Users\EQUIPO\Documents\LAMDA\DJANGO\UDEMY\h_proyectos\UsuariosDj\usuarios>python manage.py runserver --settings=usuarios.settings.local
+
+RECUERDA PARA EUR NO TENGAS SIEMPRE QUE EJECUTAR ESTE COMANDO SIEMPRE DEBES AGREGAR:
+.local
+A:
+***manage.py: os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'usuarios.settings.local')
+***wsgi.py:  os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'usuarios.settings.local')
+
+asi podemos ejecutar
+python manage.py runserver
