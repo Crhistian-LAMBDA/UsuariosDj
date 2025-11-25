@@ -34,7 +34,9 @@ DJANGO_APPS = (
     'django.contrib.staticfiles',
 )
 
-LOCAL_APPS = ()
+LOCAL_APPS = (
+    'applications.users',
+)
 
 THIRD_PARTY_APPS = ()
 
@@ -88,6 +90,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTH_USER_MODEL = 'users.User'
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
@@ -98,7 +102,11 @@ TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
+USE_I10N = True
+
 USE_TZ = True
+
+
 
 
 
