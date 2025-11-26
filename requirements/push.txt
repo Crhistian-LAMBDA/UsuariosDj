@@ -1,0 +1,7 @@
+# git push origin feature/HU_06_api_asignaturas
+# git push origin feature/HU_07_api_tareas_crud_validaciones
+# git push origin hotfix/hu_04_flujo_recuperación_contraseña
+# git push origin feature/hu_09_flujo_notas
+# git push origin Hotfix/solucion_critica_final_mini_ptoyecto
+# git push origin features/inicializacio_nuevo_proyecto
+# git push origin features/registro_nuevo_usuario
