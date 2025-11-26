@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Panel</title>
 </head>
 <body>
     <h1>Panel de Usuario</h1>
-    <h3>Bienvenidos</h3>
+    <h3>Bienvenidos: {{user}}</h3>
+    
     <ul>
-        <li><a href="#">Cerrar Sesion</a></li>
-        <li><a href="#">Cambiar Contraseña</a></li>
+        <li><a href="{% url 'users_app:user-logout' %}">Cerrar Sesion</a></li>
+        <li><a href="{% url 'users_app:user-update' %}">Cambiar Contraseña</a></li>
     </ul>
 </body>
 </html>
